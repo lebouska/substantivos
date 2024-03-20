@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conte o dinheiro</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="author" content="Lebouska">
+    <meta name="description" content="Jogo de sílabas para a alfabetização de crianças">
+    <link rel="apple-touch-icon" sizes="57x57" href="./Favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./Favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./Favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./Favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./Favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./Favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./Favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./Favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./Favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./Favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./Favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <h1>Classifique os substantivos</h1>
+    <div id="main">
+        <div id="substantive">casa</div>
+        <form>
+            <div id="comumProprio">
+                <input type="button" id="comum" value="Comum">
+                <input type="button" id="proprio" value="Próprio">
+            </div>
+            <div id="simplesComposto">
+                <input type="button" id="simples" value="Simples">
+                <input type="button" id="composto" value="Composto">
+            </div>
+            <div id="concretoAbstrato">
+                <input type="button" id="concreto" value="Concreto">
+                <input type="button" id="abstrato" value="Abstrato">
+            </div>
+            <div id="primitivoDerivado">
+                <input type="button" id="primitivo" value="Primitivo">
+                <input type="button" id="derivado" value="Derivado">
+            </div>
+            <div id="masculinoFeminino">
+                <input type="button" id="masculino" value="Masculino">
+                <input type="button" id="feminino" value="Feminino">
+            </div>
+            <div id="singularPlural">
+                <input type="button" id="singular" value="Singular">
+                <input type="button" id="plural" value="Plural">
+            </div>
+            <div id="uniformeBiforme">
+                <input type="button" id="uniforme" value="Uniforme">
+                <input type="button" id="biforme" value="Biforme">
+            </div>
+            <div id="diminutivoAumentativo">
+                <input type="button" id="diminutivo" value="Diminutivo">
+                <input type="button" id="normal" value="Normal">
+                <input type="button" id="aumentativo" value="Aumentativo">
+            </div>
+
+            <input type="button" id="start" value="Enviar">
+        </form>
+    </div>
+    <div id="history">
+        <div id="correct">0 Corretos</div>
+        <div id="wrong">0 Errados</div>
+    </div>
+</body>
+</html>
