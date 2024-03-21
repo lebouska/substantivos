@@ -1,231 +1,117 @@
-const imgDiv = document.querySelector('#img');
-const main = document.querySelector('#main');
-const reaisAnswer = document.querySelector('#reais');
-const centavosAnswer = document.querySelector('#centavos');
-const sendAnswer = document.querySelector('#start');
-const correct = document.querySelector('#correct');
-const wrong = document.querySelector('#wrong');
+const substantivePlace = document.querySelector('#substantive');
+const buttons = document.querySelectorAll('input');
+const form = document.querySelector('form');
 
 const MakeQuestionBank = (function () {
     let questionBank = [];
-    let coinsBank = [];
-    let billsBank = [];
 
     class Question{
-        constructor (string){
-            this.value = eval(string);
-            this.img = `./img/${string}.jpg`;
+        constructor (word, answer){
+            this.word = word;
+            this.answer = answer;
         }
     }
 
-    const addQuestion = (value) => {
-        const question = new Question (value);
+    const addQuestion = (word, answer) => {
+        const question = new Question (word, answer);
         questionBank.push(question);
-    }
-
-    const addCoins = (value) => {
-        const coin = new Question(value);
-        coinsBank.push(coin);
-    }
-
-    const addBills = (value) => {
-        const bill = new Question(value);
-        billsBank.push(bill);
     }
 
     const getBank = () => {
         return questionBank;
     }
 
-    const getCoins = () => {
-        return coinsBank;
-    }
+    addQuestion("casa",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("escolas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Normal"]);
+    addQuestion("cachorro-quente",["Comum","Composto","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("Canadá",["Próprio","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("jogos",["Comum","Simples","Concreto","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("Menininhos",["Comum","Simples","Concreto","Masculino","Biforme","Plural","Diminutivo"]);
+    addQuestion("Brasil",["Próprio","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("São Paulo",["Próprio","Composto","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("panelonas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Aumentativo"]);
+    addQuestion("meninões",["Comum","Simples","Concreto","Masculino","Biforme","Plural","Aumentativo"]);
+    addQuestion("Sandra",["Próprio","Simples","Concreto","Feminino","Biforme","Singular","Normal"]);
+    addQuestion("pipoquinhas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Diminutivo"]);
+    addQuestion("cadeirona",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Aumentativo"]);
+    addQuestion("cidadezinha",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Diminutivo"]);
+    addQuestion("leões",["Comum","Simples","Concreto","Masculino","Biforme","Plural","Normal"]);
+    addQuestion("girafona",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Aumentativo"]);
+    addQuestion("Coleguinhas",["Comum","Simples","Concreto","Masculino","Feminino","Uniforme","Plural","Diminutivo"]);
+    addQuestion("ator",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Normal"]);
+    addQuestion("porquinho",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Diminutivo"]);
+    
 
-    const getBills = () => {
-        return billsBank;
-    }
-
-    addCoins("10+10");
-    addCoins("10+10+10+10");
-    addCoins("25+5");
-    addCoins("25+10+10");
-    addCoins("25+25+25+10");
-    addCoins("25+50+5");
-    addCoins("25+50+5+10");
-    addCoins("25+50+10+10");
-    addCoins("50+10+5");
-    addCoins("50+10+10");
-    addCoins("50+25");
-    addCoins("100+5");
-    addCoins("100+5+25+10");
-    addCoins("100+10+10");
-    addCoins("100+10+25+10");
-    addCoins("100+25");
-    addCoins("100+50");
-    addCoins("100+50+5+10");
-    addCoins("100+50+10");
-    addCoins("100+50+10+10");
-    addCoins("100+50+25");
-    addCoins("100+50+25+5");
-    addCoins("100+50+25+10");
-    addCoins("100+100");
-    addCoins("100+100+5");
-    addCoins("100+100+10");
-    addCoins("100+100+25+5");
-    addCoins("100+100+25+10");
-    addCoins("100+100+50");
-    addCoins("100+100+50+5");
-    addCoins("100+100+50+25");
-    addCoins("100+100+100+5");
-    addCoins("100+100+100+50");
-    addCoins("100+100+100+100");
-
-    addBills("200+500");
-    addBills("200+500+500+500");
-    addBills("200+1000");
-    addBills("200+2000");
-    addBills("200+5000");
-    addBills("200+5000+200");
-    addBills("500+200+200+200");
-    addBills("1000+200+200");
-    addBills("1000+500");
-    addBills("1000+1000+1000+200");
-    addBills("2000+200+200");
-    addBills("2000+500");
-    addBills("2000+2000");
-    addBills("2000+2000+500");
-    addBills("2000+2000+2000+200");
-    addBills("2000+5000+5000+5000");
-    addBills("5000+500+500+500");
-    addBills("5000+1000");
-    addBills("5000+1000+1000+1000");
-    addBills("5000+2000");
-    addBills("5000+2000+2000");
-    addBills("5000+5000+5000+200");
-    addBills("10000+200");
-    addBills("10000+200+200+200");
-    addBills("10000+2000");
-    addBills("10000+2000+2000+2000");
-    addBills("10000+5000");
-    addBills("10000+10000+500");
-    addBills("10000+10000+1000");
-    addBills("10000+10000+2000");
-    addBills("10000+10000+5000");
-    addBills("10000+10000+10000+500");
-    addBills("10000+10000+10000+1000");
-    addBills("10000+10000+10000+2000");
-
-    addQuestion("10+10");
-    addQuestion("10+10+10+10");
-    addQuestion("25+5"); 
-    addQuestion("25+10+10");
-    addQuestion("25+25+25+10");
-    addQuestion("25+50+5");
-    addQuestion("25+50+5+10");
-    addQuestion("25+50+10+10");
-    addQuestion("50+10+5");
-    addQuestion("50+10+10");
-    addQuestion("50+25");
-    addQuestion("100+5");
-    addQuestion("100+5+25+10");
-    addQuestion("100+10+10");
-    addQuestion("100+10+25+10");
-    addQuestion("100+25");
-    addQuestion("100+50");
-    addQuestion("100+50+5+10");
-    addQuestion("100+50+10");
-    addQuestion("100+50+10+10");
-    addQuestion("100+50+25");
-    addQuestion("100+50+25+5");
-    addQuestion("100+50+25+10");
-    addQuestion("100+100");
-    addQuestion("100+100+5");
-    addQuestion("100+100+10");
-    addQuestion("100+100+25+5");
-    addQuestion("100+100+25+10");
-    addQuestion("100+100+50");
-    addQuestion("100+100+50+5");
-    addQuestion("100+100+50+25");
-    addQuestion("100+100+100+5");
-    addQuestion("100+100+100+50");
-    addQuestion("100+100+100+100");
-    addQuestion("200+200+200");
-    addQuestion("200+500");
-    addQuestion("200+500+500+500");
-    addQuestion("200+1000");
-    addQuestion("200+2000");
-    addQuestion("200+5000");
-    addQuestion("200+5000+200");
-    addQuestion("500+200+200+200");
-    addQuestion("1000+200+200");
-    addQuestion("1000+500");
-    addQuestion("1000+1000+1000+200");
-    addQuestion("2000+200+200");
-    addQuestion("2000+500");
-    addQuestion("2000+2000");
-    addQuestion("2000+2000+500");
-    addQuestion("2000+2000+2000+200");
-    addQuestion("2000+5000+5000+5000");
-    addQuestion("5000+500+500+500");
-    addQuestion("5000+1000");
-    addQuestion("5000+1000+1000+1000");
-    addQuestion("5000+2000");
-    addQuestion("5000+2000+2000");
-    addQuestion("5000+5000+5000+200");
-    addQuestion("10000+200");
-    addQuestion("10000+200+200+200");
-    addQuestion("10000+2000");
-    addQuestion("10000+2000+2000+2000");
-    addQuestion("10000+5000");
-    addQuestion("10000+10000+500");
-    addQuestion("10000+10000+1000");
-    addQuestion("10000+10000+2000");
-    addQuestion("10000+10000+5000");
-    addQuestion("10000+10000+10000+500");
-    addQuestion("10000+10000+10000+1000");
-    addQuestion("10000+10000+10000+2000");
-    addQuestion("10000+10000+10000+10000");
-
-    return {getBank, getCoins, getBills}
+    return {getBank}
 })();
 
 const gameController = (function () {
-    let usableQuestions = MakeQuestionBank.getBank();
-    let usableBills = MakeQuestionBank.getBills();
-    let usableCoins = MakeQuestionBank.getCoins();
 
-    let game = "one";
+    buttons.forEach((button) => {
+        if (button.id !== "start") {
+            button.addEventListener('click', () => {
+                changeColor(button);
+            })
+        } else {
+            button.addEventListener('click', () => {
+                testAnswer();
+            })
+        }
+    })
+
+    const changeColor = (button) => {
+        if (button.value !== "Masculino" && button.value !== "Feminino"){
+            if (button.className == "selected") {
+                button.classList.remove("selected")
+            } else {
+                removeOtherColor(button);
+                button.className = "selected";
+            }
+        } else {
+            if (button.className == "selected") {
+                button.classList.remove("selected")
+            } else {
+                button.className = "selected";
+            }
+        }
+    }
+
+    const removeOtherColor = (button) => {
+        for (const child of button.parentNode.children) {
+            child.classList.remove("selected")
+        }
+    }
+
+    const unselectAll = () => {
+        for (const button of buttons) {
+            button.classList.remove("selected");
+        }
+    }
+    
+    const getAnswer = () => {
+        const answer = [];
+
+        form.childNodes.forEach((element) => {
+            if (element.id !== "start") {
+                element.childNodes.forEach((elementChild) => {
+                    if (elementChild.className == "selected") {
+                        answer.push(elementChild.value);
+                    }
+                })
+            }
+        })
+
+        return answer;
+    }
+
+    let usableQuestions = MakeQuestionBank.getBank();
 
     const removeQuestion = (question) => {
         usableQuestions = usableQuestions.filter(value => value != question);
     }
 
-    const removeBillsCoins = (bills, coins) => {
-        usableBills = usableBills.filter(value => value != bills);
-        usableCoins = usableCoins.filter(value => value != coins);
-    }
-
     const selectQuestion = () => {
         return Math.floor(Math.random() * usableQuestions.length);
-    }
-
-    const selectBills = () => {
-        return Math.floor(Math.random() * usableBills.length);
-    }
-
-    const selectCoins = () => {
-        return Math.floor(Math.random() * usableCoins.length);
-    }
-
-    const choseGame = () => {
-        if (correctTotal > 0) {
-            let randomValue = Math.floor(Math.random() * (usableQuestions.length + usableBills.length));
-            if (randomValue < usableQuestions.length) {
-                game = "one";
-            } else {
-                game = "two";
-            }   
-        }
     }
 
     const endGame = () => {
@@ -253,90 +139,56 @@ const gameController = (function () {
         updateScore();
     }
 
-    let selectedQuestion = "";
-    let selectedBill = "";
-    let selectedCoin = "";
-
-    let firstTest = true
+    let firstTest = true;
     
-    const playRoundOne = () => {
-        selectedQuestion = usableQuestions[selectQuestion()];
-            
-        imgDiv.textContent = "";
-        firstTest = true
-        
-        const img = document.createElement('img');
-        img.src = selectedQuestion.img;
-        imgDiv.appendChild(img);
-    }
-
-    const playRoundTwo = () => {
-        selectedBill = usableBills[selectBills()];
-        selectedCoin = usableCoins[selectCoins()];
-            
-        imgDiv.textContent = "";
-        firstTest = true
-        
-        const imgBill = document.createElement('img');
-        imgBill.src = selectedBill.img;
-        imgDiv.appendChild(imgBill);
-
-        const imgCoin = document.createElement('img');
-        imgCoin.src = selectedCoin.img;
-        imgDiv.appendChild(imgCoin);
-    }
+    let wordSelected = "";
 
     const playRound = () => {
-        choseGame();
-        if (usableQuestions.length > 0 || usableBills.length > 0) {
-            if (game == "one") {
-                playRoundOne();
-            } else {
-                playRoundTwo();
-            }
+        firstTest = true;
+        unselectAll();
+
+        if (usableQuestions.length > 0) {
+            wordSelected = usableQuestions[selectQuestion()];
+            substantivePlace.textContent = wordSelected.word;
         } else {
             endGame();
         }
     }
 
-    const testAnswer = () => {
-        let answerGiven = +reaisAnswer.value * 100 + +centavosAnswer.value;
-        if (game == "one") {
-            if (answerGiven == +selectedQuestion.value) {
-                if (firstTest == true) {
-                    updateTotal("correct");
-                }
-                reaisAnswer.value = "";
-                centavosAnswer.value = "";
-                removeQuestion(selectedQuestion);
-                playRound();
-            } else {
-                if (firstTest == true) {
-                    firstTest = false;
-                    updateTotal("wrong");
-                }
-            }
-        } else {
-            if (answerGiven == +selectedBill.value + +selectedCoin.value) {
-                if (firstTest == true) {
-                    updateTotal("correct");
-                }
-                reaisAnswer.value = "";
-                centavosAnswer.value = "";
-                removeBillsCoins(selectedBill, selectedCoin);
-                playRound();
-            } else {
-                if (firstTest == true) {
-                    firstTest = false;
-                    updateTotal("wrong");
-                }
-            }
-        }
+    const skip = () => {
+        removeQuestion(wordSelected);
+        playRound();
     }
 
-    sendAnswer.addEventListener('click', function(event) {
-        testAnswer();
-    })
+    const testAnswer = () => {
+        const answerGiven = getAnswer();
+        let answer = "correct";
+        
+        if (answerGiven.length >= 7) {
+            for (let i = 0; i < 7; i++) {
+                if (answerGiven[i] !== wordSelected.answer[i]) {
+                    answer = "wrong";
+                }
+            }
+  
+            if (answer == "correct") {
+                if (firstTest == true) {
+                    updateTotal("correct");
+                }
+
+                removeQuestion(wordSelected);
+                playRound();
+                
+            } else {
+                if (firstTest == true) {
+                    updateTotal("wrong");
+                    firstTest = false;
+                }
+            }
+        } 
+    }
 
     playRound();
+
+    return {skip};
 })();

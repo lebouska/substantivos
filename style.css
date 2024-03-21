@@ -22,9 +22,11 @@ h1 {
 }
 
 #substantive {
-    font-size: 5vh;
+    font-size: 7vh;
+    font-weight: bolder;
     margin: 0px;
-    margin-top: 3vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
     text-align: center;
     color: black;
 }
@@ -37,11 +39,12 @@ h1 {
 
 form {
     display: grid;
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(9, auto);
     word-wrap: normal;
     row-gap: 1vh;
     justify-content: center;
     column-gap: 1vh;
+    align-items: center;
 }
 
 input {
@@ -51,8 +54,14 @@ input {
     justify-self: center;
 }
 
-#start {
-    
+form > div > input {
+    background-color: #B7C9F2;
+    border: none;
+    border-radius: 20px;
+}
+
+.selected {
+    background-color: gray;
 }
 
 div {
@@ -71,7 +80,7 @@ input::-webkit-inner-spin-button {
     right: 7vh;
     display: grid;
     grid-template-columns: auto auto;
-    gap: 1vw;
+    gap: 0.5vw;
     font-size: 1.5vw;
 }
 
@@ -99,3 +108,12 @@ input::-webkit-inner-spin-button {
     font-weight: bolder;
 }
 
+form > div {
+    border-bottom-style: dotted;
+    padding-bottom: 0.5vw;
+}
+
+
+#start {
+    margin-top: 3vh;
+}
