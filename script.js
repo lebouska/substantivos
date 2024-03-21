@@ -41,12 +41,12 @@ const MakeQuestionBank = (function () {
     addQuestion("ator",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Normal"]);
     addQuestion("porquinho",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Diminutivo"]);
     addQuestion("água",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Normal"]);
-    addQuestion("águiazinhas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Diminutivo"]);
+    addQuestion("aguiazinhas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Diminutivo"]);
     addQuestion("baleiona",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Aumentativo"]);
     addQuestion("tatus",["Comum","Simples","Concreto","Masculino","Uniforme","Plural","Normal"]);
     addQuestion("pessoas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Normal"]);
     addQuestion("indivíduo",["Comum","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
-    addQuestion("acrobata",["Comum","Simples","Concreto","Masculino","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("acrobata",["Comum","Simples","Concreto","Masculino","Feminino","Biforme","Singular","Normal"]);
     addQuestion("camaradas",["Comum","Simples","Concreto","Masculino","Feminino","Uniforme","Plural","Normal"]);
     addQuestion("pianistas",["Comum","Simples","Concreto","Masculino","Feminino","Uniforme","Plural","Normal"]);
     addQuestion("patinhos",["Comum","Simples","Concreto","Masculino","Biforme","Plural","Diminutivo"]);
@@ -76,7 +76,7 @@ const MakeQuestionBank = (function () {
     addQuestion("pézinhos de moleque",["Comum","Composto","Concreto","Masculino","Uniforme","Plural","Diminutivo"]);
     addQuestion("girassol",["Comum","Composto","Concreto","Masculino","Uniforme","Singular","Normal"]);
     addQuestion("cavalos-marinhos",["Comum","Composto","Masculino","Uniforme","Plural","Normal"]);
-    addQuestion("planalto",["Comum","Composto","Masculino","Concreto","Uniforme","Singular","Normal"]);
+    addQuestion("planalto",["Comum","Composto","Concreto","Masculino","Uniforme","Singular","Normal"]);
     addQuestion("vinagres",["Comum","Composto","Concreto","Masculino","Uniforme","Plural","Normal"]);
     addQuestion("Maria",["Próprio","Simples","Concreto","Feminino","Biforme","Singular","Normal"]);
     addQuestion("Organização das Nações Unidas",["Próprio","Composto","Concreto","Feminino","Uniforme","Singular","Normal"]);
@@ -101,46 +101,26 @@ const MakeQuestionBank = (function () {
     addQuestion("tubarão",["Comum","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
     addQuestion("madastras",["Comum","Simples","Concreto","Feminino","Biforme","Plural","Normal"]);
     addQuestion("genro",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Normal"]);
-    addQuestion("Boizão",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Aumentativo"]);
-    
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    addQuestion("boizão",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Aumentativo"]);
+    addQuestion("caminhadinha","Comum","Simples","Abstrato","Feminino","Uniforme","Singular","Diminutivo");
+    addQuestion("honestidade",["Comum","Simples","Abstrato","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("cheiros",["Comum","Simples","Abstrato","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("persistência",["Comum","Simples","Abstrato","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("Califórnia",["Próprio","Simples","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("quebra-cabeça",["Comum","Composto","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("luto",["Comum","Simples","Abstrato","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("arcos-íris",["Comum","Composto","Concreto","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("pontapés",["Comum","Composto","Abstrato","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("corre-corre",["Comum","Composto","Abstrato","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("guarda-sol",["Comum","Composto","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("meio-dia",["Comum","Composto","Abstrato","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("colinha",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Diminutivo"]);
+    addQuestion("Coca-Cola",["Próprio","Composto","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("requeijão",["Comum","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("videogame",["Comum","Composto","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("Portugal",["Próprio","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("camomila",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("papelzinhos",["Comum","Simples","Concreto","Masculino","Uniforme","Plural","Diminutivo"]);
 
     return {getBank}
 })();
