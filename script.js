@@ -28,7 +28,7 @@ const MakeQuestionBank = (function () {
     addQuestion("jogos",["Comum","Simples","Concreto","Masculino","Uniforme","Plural","Normal"]);
     addQuestion("Menininhos",["Comum","Simples","Concreto","Masculino","Biforme","Plural","Diminutivo"]);
     addQuestion("Brasil",["Próprio","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
-    addQuestion("São Paulo",["Próprio","Composto","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("Belo Horizonte",["Próprio","Composto","Concreto","Feminino","Uniforme","Singular","Normal"]);
     addQuestion("panelonas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Aumentativo"]);
     addQuestion("meninões",["Comum","Simples","Concreto","Masculino","Biforme","Plural","Aumentativo"]);
     addQuestion("Sandra",["Próprio","Simples","Concreto","Feminino","Biforme","Singular","Normal"]);
@@ -40,7 +40,107 @@ const MakeQuestionBank = (function () {
     addQuestion("Coleguinhas",["Comum","Simples","Concreto","Masculino","Feminino","Uniforme","Plural","Diminutivo"]);
     addQuestion("ator",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Normal"]);
     addQuestion("porquinho",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Diminutivo"]);
+    addQuestion("água",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("águiazinhas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Diminutivo"]);
+    addQuestion("baleiona",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Aumentativo"]);
+    addQuestion("tatus",["Comum","Simples","Concreto","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("pessoas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Normal"]);
+    addQuestion("indivíduo",["Comum","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("acrobata",["Comum","Simples","Concreto","Masculino","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("camaradas",["Comum","Simples","Concreto","Masculino","Feminino","Uniforme","Plural","Normal"]);
+    addQuestion("pianistas",["Comum","Simples","Concreto","Masculino","Feminino","Uniforme","Plural","Normal"]);
+    addQuestion("patinhos",["Comum","Simples","Concreto","Masculino","Biforme","Plural","Diminutivo"]);
+    addQuestion("cliente",["Comum","Simples","Concreto","Masculino","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("imigrantes",["Comum","Simples","Concreto","Masculino","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("anjo",["Comum","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("criancinhas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Diminutivo"]);
+    addQuestion("formigonas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Aumentativo"]);
+    addQuestion("foca",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("cobrinhas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Diminutivo"]);
+    addQuestion("borboletinha",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Diminutivo"]);
+    addQuestion("óculos",["Comum","Simples","Concreto","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("paraquedas",["Comum","Composto","Concreto","Masculino","Uniforme","Singular","Plural","Normal"]);
+    addQuestion("fadinhas",["Comum","Simples","Concreto","Feminino","Uniforme","Plural","Diminutivo"]);
+    addQuestion("amor",["Comum","Simples","Abstrato","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("Amazonas",["Próprio","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("Estados Unidos",["Próprio","Composto","Concreto","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("São Paulo (cidade)",["Próprio","Composto","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("São Paulo (estado)",["Próprio","Composto","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("fé",["Comum","Simples","Abstrato","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("belezas",["Comum","Simples","Abstrato","Feminino","Uniforme","Plural","Normal"]);
+    addQuestion("riqueza",["Comum","Simples","Abstrato","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("frio",["Comum","Simples","Abstrato","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("sustões",["Comum","Simples","Abstrato","Masculino","Uniforme","Plural","Aumentativo"]);
+    addQuestion("dor",["Comum","Simples","Abstrato","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("calorzinho",["Comum","Simples","Abstrato","Masculino","Uniforme","Singular","Diminutivo"]);
+    addQuestion("pézinhos de moleque",["Comum","Composto","Concreto","Masculino","Uniforme","Plural","Diminutivo"]);
+    addQuestion("girassol",["Comum","Composto","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("cavalos-marinhos",["Comum","Composto","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("planalto",["Comum","Composto","Masculino","Concreto","Uniforme","Singular","Normal"]);
+    addQuestion("vinagres",["Comum","Composto","Concreto","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("Maria",["Próprio","Simples","Concreto","Feminino","Biforme","Singular","Normal"]);
+    addQuestion("Organização das Nações Unidas",["Próprio","Composto","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("Ministério da Educação",["Próprio","Composto","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("Argentina",["Próprio","Simples","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("fome",["Comum","Simples","Abstrato","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("vidas",["Comum","Simples","Abstrato","Feminino","Uniforme","Plural","Normal"]);
+    addQuestion("feiura",["Comum","Simples","Abstrato","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("derrotas",["Comum","Simples","Abstrato","Feminino","Uniforme","Plural","Normal"]);
+    addQuestion("Sol",["Próprio","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("sóis",["Comum","Simples","Concreto","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("sabedoria",["Comum","Simples","Abstrato","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("cozinha",["Comum","Simples","Concreto","Feminino","Uniforme","Singular","Normal"]);
+    addQuestion("dinossauros",["Comum","Simples","Concreto","Masculino","Uniforme","Plural","Normal"]);
+    addQuestion("professorona",["Comum","Simples","Concreto","Feminino","Biforme","Singular","Aumentativo"]);
+    addQuestion("amigo",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Normal"]);
+    addQuestion("deputado",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Normal"]);
+    addQuestion("freguês",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Normal"]);
+    addQuestion("campeãs",["Comum","Simples","Concreto","Masculino","Biforme","Plural","Normal"]);
+    addQuestion("vovôzinho",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Diminutivo"]);
+    addQuestion("marido",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Normal"]);
+    addQuestion("tubarão",["Comum","Simples","Concreto","Masculino","Uniforme","Singular","Normal"]);
+    addQuestion("madastras",["Comum","Simples","Concreto","Feminino","Biforme","Plural","Normal"]);
+    addQuestion("genro",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Normal"]);
+    addQuestion("Boizão",["Comum","Simples","Concreto","Masculino","Biforme","Singular","Aumentativo"]);
     
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     return {getBank}
 })();
@@ -60,7 +160,7 @@ const gameController = (function () {
     })
 
     const changeColor = (button) => {
-        if (button.value !== "Masculino" && button.value !== "Feminino"){
+        if (button.value !== "Masculino" && button.value !== "Feminino" && button.value !== "Singular" && button.value !== "Plural"){
             if (button.className == "selected") {
                 button.classList.remove("selected")
             } else {
